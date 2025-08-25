@@ -1,0 +1,190 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #4f46e5, #3b82f6);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+.cta-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: white;
+  color: #3b82f6;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.cta-btn:hover {
+  background: #e0e7ff;
+}
+
+/* Features */
+.features {
+  padding: 60px 20px;
+  text-align: center;
+}
+.features h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #f9fafb;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Why Choose Us */
+.why-choose {
+  background: #f3f4f6;
+  padding: 60px 20px;
+  text-align: center;
+}
+.why-choose h2 {
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+.why-choose ul {
+  list-style: none;
+}
+.why-choose li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+/* Testimonials */
+.testimonials {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: #f9f9f9;
+}
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+.testimonial {
+  max-width: 500px;
+  margin: 1rem auto;
+  padding: 1.2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.testimonial span {
+  display: block;
+  margin-top: 0.8rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.hidden-testimonials {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: max-height 0.6s ease, opacity 0.6s ease, transform 0.6s ease;
+}
+.hidden-testimonials.show {
+  max-height: 2000px; /* large enough */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#seeMoreBtn {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #007BFF;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+#seeMoreBtn:hover {
+  background: #0056b3;
+}
+
+/* Footer */
+footer {
+  background: #111827;
+  color: #9ca3af;
+  text-align: center;
+  padding: 25px;
+}
+footer .socials {
+  margin-top: 10px;
+}
+footer .socials a {
+  color: #9ca3af;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+footer .socials a:hover {
+  color: white;
+}
+
+/* Hidden testimonials start invisible */
+.hidden-testimonials .testimonial {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition-delay: var(--delay, 0s);
+}
+
+/* When "show" class is active, fade them in with delay */
+.hidden-testimonials.show .testimonial {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+}
